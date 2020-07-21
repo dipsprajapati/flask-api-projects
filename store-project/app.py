@@ -28,6 +28,7 @@ def create_store():
     stores.append(new_store)
     return jsonify(new_store)
 
+#GET http://127.0.0.1:5000/store
 @app.route('/store')
 def get_stores():
     return jsonify({'stores' : stores})
