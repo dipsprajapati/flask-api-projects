@@ -13,11 +13,12 @@ stores = [
         ]
     }
 ]
-
+#index page
 @app.route('/')
 def home():
     return "Welcome to my store"
 
+#POST http://127.0.01:5000/store
 @app.route('/store', methods=['POST'])
 def create_store():
     request_data = request.get_json()
